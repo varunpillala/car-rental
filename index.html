@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Rental System</h1>
+    </header>
+    <section id="car-list">
+        <h2>Available Cars</h2>
+        <div class="car" data-name="Toyota Corolla" data-price="50">
+            <h3>Toyota Corolla</h3>
+            <p>Price: $50/day</p>
+            <button onclick="bookCar(this)">Book Now</button>
+        </div>
+        <div class="car" data-name="Honda Civic" data-price="60">
+            <h3>Honda Civic</h3>
+            <p>Price: $60/day</p>
+            <button onclick="bookCar(this)">Book Now</button>
+        </div>
+    </section>
+    <section id="booking-form" style="display:none;">
+        <h2>Book Your Car</h2>
+        <form onsubmit="submitBooking(event)">
+            <label>Name: <input type="text" id="customer-name" required></label><br>
+            <label>Car: <input type="text" id="selected-car" readonly></label><br>
+            <label>Days: <input type="number" id="rental-days" min="1" required></label><br>
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
